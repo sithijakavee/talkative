@@ -190,7 +190,7 @@ const ChatComponent = () => {
     <>
     <Navbar/>
       <Suspense fallback={<Loading/>}>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen pt-[70px]">
           {/* <Navbar onToggle3D={toggle3D} is3DEnabled={is3DEnabled} onLogout={handleLogout} /> */}
           <div
             className={`flex-grow app-container ${
