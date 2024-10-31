@@ -14,22 +14,17 @@ const Navbar = () => {
 
   
   return (
-    <div className="flex items-center justify-between w-full bg-primary text-white h-[70px] p-3 fixed top-0 left-0 right-0">
+    <div className="flex items-center justify-between !z-[9999] w-full bg-primary text-white h-[70px] p-3 fixed top-0 left-0 right-0">
       <div>
-        <Link to={"/"} className="font-bold text-[25px] text-secondary">
+        <a href={"/"} className="font-bold text-[25px] text-secondary">
           Talakative
-        </Link>
+        </a>
       </div>
 
       <div className="flex items-center gap-10">
         {links.map((link, i) => (
-          <Link
-            to={link.href}
-            key={i}
-            className="font-light text-[25px] text-secondary"
-          >
-            {link.label}
-          </Link>
+          
+          <a href={link.href} key={i}  className="font-light text-[25px] text-secondary">{link.label}</a>
         ))}
       </div>
 

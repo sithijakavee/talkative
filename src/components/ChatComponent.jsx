@@ -12,8 +12,9 @@ import { Model } from '../Explorer';
 import { ConvaiClient } from "convai-web-sdk";
 import { SETTINGS } from "../constants";
 import envHdr from "../assets/3d/snowy_forest_path_01_4k.hdr"
+import Loading from "./Loading";
 
-// import Navbar from './components/navbar';
+import Navbar from './Navbar';
 // import Footer from './components/Footer';
 
 const convaiClient = new ConvaiClient({
@@ -187,7 +188,8 @@ const ChatComponent = () => {
 
   return (
     <>
-      <Suspense fallback={<>Loading...</>}>
+    <Navbar/>
+      <Suspense fallback={<Loading/>}>
         <div className="flex flex-col min-h-screen">
           {/* <Navbar onToggle3D={toggle3D} is3DEnabled={is3DEnabled} onLogout={handleLogout} /> */}
           <div

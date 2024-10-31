@@ -1,14 +1,13 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import ChatComponent from '../components/ChatComponent'
+import React from "react";
+import Navbar from "../components/Navbar";
+import ChatComponent from "../components/ChatComponent";
 
 const Chat = () => {
   return (
     <>
-    <Navbar/>
-    <ChatComponent/>
+      <ChatComponent />
     </>
-  )
-}
+  );
+};
 
-export default Chat
+export default Chat;
