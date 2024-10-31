@@ -48,7 +48,7 @@ const SignInComponent = () => {
   }, [profile]);
 
   const saveToDB = async (profile) => {
-    const res = await axios.post(process.env.API_URL + "/api/auth/register", {
+    const res = await axios.post("https://talkative-server.vercel.app/api/auth/register", {
       name: profile.name,
       email: profile.email,
       image: profile.picture ? profile.picture : "",
