@@ -59,6 +59,10 @@ const SignInComponent = () => {
       name: profile.name,
       email: profile.email,
       image: profile.picture ? profile.picture : "",
+    }, {
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+      },
     });
 
     if (res.status === 201) {
