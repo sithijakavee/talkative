@@ -55,11 +55,12 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           {user?.email ? (
             <>
-              <img
+              {/* <img
                 src={user.pp}
                 className="rounded-full w-[35px] h-[35px]"
                 alt="User Avatar"
-              />
+              /> */}
+              <span className="text-sm font-bold text-secondary">{user.username}</span>
               <button
                 className="bg-secondary px-4 py-2 text-primary font-bold rounded-md"
                 onClick={handleLogout}

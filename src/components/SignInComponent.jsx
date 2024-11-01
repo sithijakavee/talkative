@@ -47,7 +47,14 @@ const SignInComponent = () => {
     }
   }, [profile]);
 
+   // CHANGE THE URL
   const saveToDB = async (profile) => {
+    // const res = await axios.post("http://localhost:5000/api/auth/register", {
+    //   name: profile.name,
+    //   email: profile.email,
+    //   image: profile.picture ? profile.picture : "",
+    // });
+
     const res = await axios.post("https://talkative-server.vercel.app/api/auth/register", {
       name: profile.name,
       email: profile.email,
