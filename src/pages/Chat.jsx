@@ -68,9 +68,8 @@ const Chat = () => {
         const today = convertDate(new Date());
         const expire = convertDate(subscription.expire);
 
-        console.log(convertDate(Date.now()));
 
-        if (today > expire) {
+        if (today < expire) {
           console.log("Expired");
           window.location.href = "/pricing";
           return null;

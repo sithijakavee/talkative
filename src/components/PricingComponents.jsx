@@ -65,17 +65,18 @@ const PricingComponents = () => {
   axios
     .get(`https://talkative-server.vercel.app/api/subscriptions?email=${email}`)
     .then((res) => {
-      if (res.data) {
+      if (res.data.expire) {
         const subscription = res.data;
         const today = convertDate(new Date());
         const expire = convertDate(subscription.expire);
 
-        console.log(convertDate(Date.now()));
+        console.log("Today", convertDate(today));
+        console.log("expire", convertDate(expire));
 
-        if (today > expire) {
+        if (today < expire) {
           console.log("Expired");
           toast("Your Subscription has been expired!");
-        } else if (today < expire) {
+        } else if (today > expire) {
           console.log("Not Expired")
           window.location.href = "/chat"
           
