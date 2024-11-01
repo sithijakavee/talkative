@@ -38,6 +38,10 @@ const Success = () => {
         userEmail,
         plan: "monthly",
         expire: newDate,
+      }, {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        },
       });
       
     } else if (plan === "yearly") {
@@ -58,6 +62,10 @@ const Success = () => {
         userEmail,
         plan: "yearly",
         expire: newDate,
+      }, {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        },
       });
     }
   }
