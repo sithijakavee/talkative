@@ -27,11 +27,19 @@ const Success = () => {
       const newDate = addDays(todayDate, days);
       console.log(newDate);
 
-      const res = axios.post(`http://localhost:5000/api/subscription`, {
+      // const res = axios.post(`http://localhost:5000/api/subscription`, {
+      //   userEmail,
+      //   plan: "monthly",
+      //   expire: newDate,
+      // });
+
+
+      const res = axios.post(`https://talkative-server.vercel.app/api/subscription`, {
         userEmail,
         plan: "monthly",
         expire: newDate,
       });
+      
     } else if (plan === "yearly") {
       const todayDate = new Date();
 
@@ -40,7 +48,13 @@ const Success = () => {
       const newDate = addDays(todayDate, days);
       console.log(newDate);
 
-      const res = axios.post("http://localhost:5000/api/subscription", {
+      // const res = axios.post("http://localhost:5000/api/subscription", {
+      //   userEmail,
+      //   plan: "yearly",
+      //   expire: newDate,
+      // });
+
+      const res = axios.post("https://talkative-server.vercel.app/api/subscription", {
         userEmail,
         plan: "yearly",
         expire: newDate,
