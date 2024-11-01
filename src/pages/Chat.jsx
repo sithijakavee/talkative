@@ -61,7 +61,7 @@ const Chat = () => {
   //   });
 
   axios
-    .get(`https://talkative-server.vercel.app/subscriptions?email=${email}`)
+    .get(`https://talkative-server.vercel.app/api/subscriptions?email=${email}`)
     .then((res) => {
       if (res.data) {
         const subscription = res.data;
