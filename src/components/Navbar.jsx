@@ -31,6 +31,7 @@ const Navbar = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("username");
     localStorage.removeItem("pp");
+    localStorage.removeItem("expire");
     window.location.reload();
   };
 
