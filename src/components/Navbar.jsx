@@ -23,6 +23,7 @@ const Navbar = () => {
       email: localStorage.getItem("user"),
       username: localStorage.getItem("username"),
       pp: localStorage.getItem("pp"),
+      expire: localStorage.getItem("expire"),
     });
   }, []);
 
@@ -85,7 +86,7 @@ const Navbar = () => {
             <div className="absolute bg-white p-2 top-5 right-0 max-w-[300px] min-w-[300px] h-auto rounded-md">
               {user?.email ? (
                 <div className="flex gap-2 flex-col">
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 items-center">
                     <FaUserCircle color="black" size={40} />
                     <div className="flex flex-col">
                       <span className="text-sm font-light text-dark">
@@ -94,6 +95,15 @@ const Navbar = () => {
                       <span className="text-sm font-light text-dark">
                         {user.email}
                       </span>
+                      {user.expire ? (
+                        <span className="text-xs font-light text-blue-500">
+                          Subscription will expire on {user.expire}
+                        </span>
+                      ) : (
+                        <a href="/pricing" className="text-xs font-light text-blue-950 underline">
+                          Subscribe to Learn
+                        </a>
+                      )}
                     </div>
                   </div>
 
